@@ -46,14 +46,14 @@ const data = google.visualization.arrayToDataTable([
   ['Broadcasting',10]
 ]);
 
-// Set Options
+// Set Options and Title,mind the is3d true
 const options = {
   title:'Godbrand Games L.L.C. Services',
   is3D:true
 };
 
 // Draw
-const chart = new google.visualization.PieChart(document.getElementById('services3dPieChart'));
+const chart = new google.visualization.PieChart(document.getElementById('services3dPieChart'));//not changing the element id above is an easy mistake to make
 chart.draw(data, options);
 
 }
@@ -64,3 +64,4 @@ chart.draw(data, options);
 
 
 </html>
+
