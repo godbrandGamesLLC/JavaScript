@@ -23,11 +23,13 @@
 
 <!--Beginning of chart size and name -->
 <div
-id="myChart" style="width:100%; max-width:600px; height:500px;">
+id="services3dPieChart" style="width:100%; max-width:600px; height:500px;">
 </div>
-<!--The end of chart size and name -->
+<!--End of chart size and name -->
 
+<!--Beginning of pie chart innerworkings and the javascript-->
 <script>
+//Loading/warming up the chart tools
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
@@ -51,11 +53,14 @@ const options = {
 };
 
 // Draw
-const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+const chart = new google.visualization.PieChart(document.getElementById('services3dPieChart'));
 chart.draw(data, options);
 
 }
 </script>
+<!--End of the pie chart innerworkings and the javascript-->
 
 </body>
+
+
 </html>
