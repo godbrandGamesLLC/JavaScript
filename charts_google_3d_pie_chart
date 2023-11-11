@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	
+    <h3 style="font-family:serif"> Company: Godbrand Games L.L.C. </h3>
+    <h3 style="font-family:serif"> Developer: Akinwale Owi </h3>  
+    <h3 style="font-family:serif"> Program Goal: Make a Google 3d Pie Chart</h3>
+
+
+    <title>Charts: Google 3D Pie Chart
+    </title>
+
+</head>
+
+<!--Beginning of imports-->
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<!--End of imports-->
+
+
+<body text = "#522D80">
+
+
+<!--Beginning of chart size and name -->
+<div
+id="myChart" style="width:100%; max-width:600px; height:500px;">
+</div>
+<!--The end of chart size and name -->
+
+<script>
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+// Set Data
+
+
+const data = google.visualization.arrayToDataTable([
+  ['Contry', 'Mhl'],
+  ['Web development',65],
+  ['Unity Game Dev',15],
+  ['Movies',10],
+  ['Broadcasting',10]
+]);
+
+// Set Options
+const options = {
+  title:'Godbrand Games L.L.C. Services',
+  is3D:true
+};
+
+// Draw
+const chart = new google.visualization.PieChart(document.getElementById('myChart'));
+chart.draw(data, options);
+
+}
+</script>
+
+</body>
+</html>
